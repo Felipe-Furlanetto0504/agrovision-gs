@@ -38,13 +38,13 @@ class UsuarioServiceTest {
     void setUp() {
         usuario = Usuario.builder()
                 .id(1L)
-                .cpf("12345678901")
+                .cpf(12345678901L)
                 .nome("João Silva")
                 .senha("hashed_password")
                 .nomeFazenda("Fazenda Esperança")
                 .build();
 
-        request = new UsuarioRequest("12345678901", "João Silva", "senha123", "Fazenda Esperança");
+        request = new UsuarioRequest(12345678901L, "João Silva", "senha123", "Fazenda Esperança");
     }
 
     @Test
@@ -55,7 +55,7 @@ class UsuarioServiceTest {
 
         UsuarioResponse response = service.criar(request);
 
-        assertThat(response.cpf()).isEqualTo("12345678901");
+        assertThat(response.cpf()).isEqualTo(12345678901L);
         assertThat(response.nome()).isEqualTo("João Silva");
         assertThat(response.nomeFazenda()).isEqualTo("Fazenda Esperança");
         verify(repository).save(any(Usuario.class));
