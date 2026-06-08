@@ -34,8 +34,8 @@ public class Usuario implements UserDetails {
     private Long id;
 
     /** CPF sem formatação — 11 dígitos */
-    @Column(name = "CPF_USER", unique = true, nullable = false, length = 11)
-    private String cpf;
+    @Column(name = "CPF_USER", unique = true, nullable = false)
+    private Long cpf;
 
     @Column(name = "NOME_USER", nullable = false, length = 60)
     private String nome;
@@ -61,8 +61,7 @@ public class Usuario implements UserDetails {
     }
 
     /** CPF é o "username" usado na autenticação */
-    @Override
-    public String getUsername() { return cpf; }
+    @Override public String getUsername() { return String.valueOf(cpf); }
 
     @Override
     public String getPassword() { return senha; }

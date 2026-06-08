@@ -4,10 +4,9 @@ import jakarta.validation.constraints.*;
 
 public record UsuarioRequest(
 
-        @NotBlank(message = "CPF é obrigatório")
-        @Pattern(regexp = "\\d{11}", message = "CPF deve conter 11 dígitos numéricos")
-        String cpf,
-
+		@NotNull(message = "CPF é obrigatório")
+		Long cpf,
+		
         @NotBlank(message = "Nome é obrigatório")
         @Size(max = 60, message = "Nome deve ter no máximo 60 caracteres")
         String nome,
