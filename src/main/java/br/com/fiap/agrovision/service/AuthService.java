@@ -21,10 +21,10 @@ public class AuthService {
 
     public TokenResponse login(LoginRequest request) {
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.cpf(), request.senha())
+                new UsernamePasswordAuthenticationToken(String.valueOf(request.cpf()), request.senha())
         );
 
-        Usuario usuario = repository.findByCpf(request.cpf())
+        Usuario usuario = repository.findByCpf(String.valueOf(request.cpf()))
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
         String token = jwtService.generateToken(usuario);
