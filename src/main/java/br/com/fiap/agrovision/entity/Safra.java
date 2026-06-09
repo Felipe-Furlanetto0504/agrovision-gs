@@ -20,11 +20,10 @@ import java.time.LocalDate;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Safra {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_safra")
-    @SequenceGenerator(name = "seq_safra", sequenceName = "SEQ_SAFRA_GS", allocationSize = 1)
-    @Column(name = "ID_SAFRA")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_SAFRA")
+	private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_PLANTACAO", nullable = false)
