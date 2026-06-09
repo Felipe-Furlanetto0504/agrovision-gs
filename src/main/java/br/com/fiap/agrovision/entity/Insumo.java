@@ -24,7 +24,7 @@ public class Insumo {
 	@Column(name = "ID_INSUMO")
 	private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID_PLANTACAO", nullable = false)
     private Plantacao plantacao;
 

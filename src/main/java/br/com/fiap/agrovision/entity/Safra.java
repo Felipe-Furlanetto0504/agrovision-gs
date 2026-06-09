@@ -25,7 +25,7 @@ public class Safra {
 	@Column(name = "ID_SAFRA")
 	private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID_PLANTACAO", nullable = false)
     private Plantacao plantacao;
 
