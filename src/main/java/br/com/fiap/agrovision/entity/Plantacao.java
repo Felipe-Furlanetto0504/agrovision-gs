@@ -28,10 +28,10 @@ public class Plantacao {
 	@Column(name = "ID_PLANTACAO")
 	private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_USER", nullable = false)
-    private Usuario usuario;
-
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "ID_USER", nullable = false)
+	private Usuario usuario;
+	
     @Column(name = "TIPO_PLANTIO", nullable = false, length = 50)
     private String tipoPlantio;
 
