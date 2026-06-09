@@ -38,8 +38,6 @@
 
 | Recurso | Link |
 |:---|:---|
-| 🚀 **Deploy (produção)** | [https://agrovision-gs-fewn.onrender.com](https://agrovision-gs-fewn.onrender.com) |
-| 📄 **Documentação Swagger** | [https://agrovision-gs-fewn.onrender.com/swagger-ui.html](https://agrovision-gs-fewn.onrender.com/swagger-ui.html) |
 | 🎬 **Vídeo de Apresentação** (até 10 min) | `[ a preencher ]` |
 | 🎯 **Video Pitch** (até 3 min) | `[ a preencher ]` |
 | 💻 **Repositório GitHub** | `https://github.com/Felipe-Furlanetto0504/agrovision-gs` |
