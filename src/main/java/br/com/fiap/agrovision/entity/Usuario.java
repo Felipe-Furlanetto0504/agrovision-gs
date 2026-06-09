@@ -27,12 +27,11 @@ import java.util.List;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Usuario implements UserDetails {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_user")
-    @SequenceGenerator(name = "seq_user", sequenceName = "SEQ_USER_GS", allocationSize = 1)
-    @Column(name = "ID_USER")
-    private Long id;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_USER")
+	private Long id;
+	
     /** CPF sem formatação — 11 dígitos */
     @Column(name = "CPF_USER", unique = true, nullable = false)
     private Long cpf;

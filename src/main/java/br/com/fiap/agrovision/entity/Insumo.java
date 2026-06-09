@@ -19,11 +19,10 @@ import java.math.BigDecimal;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Insumo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_insumo")
-    @SequenceGenerator(name = "seq_insumo", sequenceName = "SEQ_INSUMO_GS", allocationSize = 1)
-    @Column(name = "ID_INSUMO")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_INSUMO")
+	private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_PLANTACAO", nullable = false)

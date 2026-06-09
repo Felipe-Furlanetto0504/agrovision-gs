@@ -23,11 +23,10 @@ import java.util.List;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Plantacao {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_plantacao")
-    @SequenceGenerator(name = "seq_plantacao", sequenceName = "SEQ_PLANTACAO_GS", allocationSize = 1)
-    @Column(name = "ID_PLANTACAO")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_PLANTACAO")
+	private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_USER", nullable = false)
