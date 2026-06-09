@@ -24,7 +24,7 @@ public class AuthService {
                 new UsernamePasswordAuthenticationToken(String.valueOf(request.cpf()), request.senha())
         );
 
-        Usuario usuario = repository.findByCpf(String.valueOf(request.cpf()))
+        Usuario usuario = repository.findByCpf(request.cpf())
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
         String token = jwtService.generateToken(usuario);

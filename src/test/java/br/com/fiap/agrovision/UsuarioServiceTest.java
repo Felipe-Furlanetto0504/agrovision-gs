@@ -49,7 +49,7 @@ class UsuarioServiceTest {
 
     @Test
     void criar_deveSalvarUsuarioComSucesso() {
-        when(repository.existsByCpf("12345678901")).thenReturn(false);
+        when(repository.existsByCpf(12345678901L)).thenReturn(false);
         when(passwordEncoder.encode("senha123")).thenReturn("hashed_password");
         when(repository.save(any(Usuario.class))).thenReturn(usuario);
 
@@ -63,7 +63,7 @@ class UsuarioServiceTest {
 
     @Test
     void criar_deveLancarConflictException_quandoCpfJaExiste() {
-        when(repository.existsByCpf("12345678901")).thenReturn(true);
+        when(repository.existsByCpf(12345678901L)).thenReturn(true);
 
         assertThatThrownBy(() -> service.criar(request))
                 .isInstanceOf(ConflictException.class)

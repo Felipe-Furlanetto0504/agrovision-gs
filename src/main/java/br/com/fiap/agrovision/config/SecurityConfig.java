@@ -81,7 +81,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return cpf -> usuarioRepository.findByCpf(cpf)
+        return cpf -> usuarioRepository.findByCpf(Long.valueOf(cpf))
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + cpf));
     }
 

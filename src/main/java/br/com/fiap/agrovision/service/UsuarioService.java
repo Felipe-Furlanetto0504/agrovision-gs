@@ -20,7 +20,7 @@ public class UsuarioService {
     private final PasswordEncoder passwordEncoder;
 
     public UsuarioResponse criar(UsuarioRequest request) {
-        if (repository.existsByCpf(String.valueOf(request.cpf()))) {
+        if (repository.existsByCpf(request.cpf())) {
             throw new ConflictException("CPF já cadastrado: " + request.cpf());
         }
 
@@ -45,7 +45,7 @@ public class UsuarioService {
     public UsuarioResponse atualizar(Long id, UsuarioRequest request) {
         Usuario usuario = findById(id);
 
-        if (!usuario.getCpf().equals(request.cpf()) && repository.existsByCpf(String.valueOf(request.cpf()))) {
+        if (!usuario.getCpf().equals(request.cpf()) && repository.existsByCpf(request.cpf())) {
             throw new ConflictException("CPF já cadastrado: " + request.cpf());
         }
 
