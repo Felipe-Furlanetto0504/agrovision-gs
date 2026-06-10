@@ -40,7 +40,7 @@
 |:---|:---|
 | 🚀 **API Backend** | [https://agrovision-gs-fewn.onrender.com](https://agrovision-gs-fewn.onrender.com) |
 | 📄 **Swagger da API** | [https://agrovision-gs-fewn.onrender.com/swagger-ui.html](https://agrovision-gs-fewn.onrender.com/swagger-ui.html) |
-| 🎬 **Vídeo de Apresentação** (até 10 min) | `[ a preencher ]` |
+| 🎬 **Vídeo de Apresentação** (até 10 min) | https://youtu.be/JOTWeFWBXfU |
 | 🎯 **Video Pitch** (até 3 min) |https://youtu.be/IPzGYReVR3w|
 | 💻 **Repositório GitHub** | `https://github.com/Felipe-Furlanetto0504/agrovision-gs` |
 
